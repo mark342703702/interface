@@ -5,7 +5,12 @@ import chalk from 'chalk';
 import session from 'express-session';
 import router from './routes/index.js';
 import connectMongo from 'connect-mongo';
-const app = express()
+import bodyParser from 'body-parser';
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const MongoStore = connectMongo(session);
 app.use(session({

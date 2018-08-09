@@ -7,11 +7,13 @@ module.exports = {
         name : 'secretID',
         secret : 'xiaoshidaicrpto',
         cookie: {
-			httpOnly: true,
-		    secure:   false,
-		    maxAge:   365 * 24 * 60 * 60 * 1000,
-		}
+				httpOnly: true,
+			    secure:   false,
+			    maxAge:   365 * 24 * 60 * 60 * 1000,
+			}
     },
     //密码加密盐
-    cryptoSecret : 'skrskrskr'
+    cryptoSecret : 'skrskrskr',
+		//token
+		jwtTokenSecret : 'xsdTokenBaby'
 }
