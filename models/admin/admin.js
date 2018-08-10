@@ -19,7 +19,7 @@ const adminSchema = new Schema({
     //Admin:普通管理、 superAdmin:超级管理员
     status: { type : String, enum : ['Admin', 'superAdmin'], required: true, default : 'Admin'},
     //头像
-	  avatar: {type: String, default: 'default.jpg'}
+	  avatar: {type: String, default: '/images/default.jpg'}
 });
 
 adminSchema.index({id: 1});

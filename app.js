@@ -6,11 +6,14 @@ import session from 'express-session';
 import router from './routes/index.js';
 import connectMongo from 'connect-mongo';
 import bodyParser from 'body-parser';
+import path from 'path';
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 const MongoStore = connectMongo(session);
 app.use(session({

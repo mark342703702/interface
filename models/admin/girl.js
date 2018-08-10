@@ -16,7 +16,9 @@ const girlSchema = new Schema({
     //创建时间
     create_time: {type : Date, default : Date.now},
     //头像
-	  avatar: {type: String, default: 'default.jpg'}
+	  avatar: {type: String, default: '/images/default.jpg'},
+    //Girl:职员
+    status: { type : String, enum : ['girl'], required: true, default : 'girl'},
 });
 
 girlSchema.index({id: 1});
