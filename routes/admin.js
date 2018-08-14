@@ -10,6 +10,6 @@ router.post('/login', Admin.login);  //登陆
 router.get('/getUser',[Check.checkToken], Admin.getUser) //通过token返回用户信息
 
 router.post('/register', Admin.register);
-router.get('/test', [Check.checkToken], Admin.test);
+router.get('/test', Admin.test);
 
 export default router
