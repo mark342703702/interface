@@ -15,5 +15,12 @@ module.exports = {
     //密码加密盐
     cryptoSecret : 'skrskrskr',
 		//token
-		jwtTokenSecret : 'xsdTokenBaby'
+		jwtTokenSecret : 'xsdTokenBaby',
+		//微信
+		weChat : {
+			//小程序appid
+			appid : 'wx82ad24f0812d8860',
+			//小程序appsecret
+			appsecret : '0f92f734cae576404b2042e9bd3201b7'
+		}
 }

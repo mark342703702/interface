@@ -4,7 +4,6 @@ import {setRandomId, setPasswordCrtpto, setToken} from '../../utils/index';
 import jwt from 'jwt-simple';
 
 class Admin{
-
     //登陆
     async login(req, res, next){
         let { type } = req.body;
@@ -70,7 +69,7 @@ class Admin{
     }
 
     async test(req, res, next){
-
+        console.log(this)
         res.status(200).send({
           timestamp: 'sds',
         });
