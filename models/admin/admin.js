@@ -16,7 +16,7 @@ const adminSchema = new Schema({
     phone : { type: String},
     //创建时间
     create_time: {type : Date, default : Date.now},
-    //admin:普通管理、 superAdmin:超级管理员， girl:职员
+    //admin:普通管理员、 superAdmin:超级管理员， girl:职员
     status: { type : String, enum : ['admin', 'superAdmin', 'girl'], required: true, default : 'admin'},
     //头像
 	  avatar: {type: String, default: '/images/default.jpg'}

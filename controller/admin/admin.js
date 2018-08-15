@@ -4,7 +4,7 @@ import {setRandomId, setPasswordCrtpto, setToken} from '../../utils/index';
 import jwt from 'jwt-simple';
 
 class Admin{
-    //登陆
+    //系统管理员登陆
     async login(req, res, next){
         let { type } = req.body;
         console.log(req.body)
@@ -39,6 +39,13 @@ class Admin{
                   return;
             }
         }
+    }
+
+
+
+    //增加系统管理员
+    async addAdmin(req, res, next){
+      res.status(200).json({user : 's'})
     }
 
     //通过token返回用户信息
